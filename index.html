@@ -82,44 +82,37 @@
         <div class="row">
             <div class="col-md-12" id="flightInfo">
                 <h1>JET SET</h1>
-                <form id="flight-form">
-                    <label for="location">What's your home airport?</label><br>
-                    <input type="text" id="location-input"><br>
-                    <label for="date">What date do you want to leave?</label><br>
-                    <input type="text" id="location-input"><br>
-                    <input id="search-flights" type="submit" value="Find a flight">
-                </form>
-                <div class="col-md-12" id="flight-origin"></div>
-                <div class="col-md-12" id="flight-destination"></div>
-                <div class="col-md-12" id="flight-date"></div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Click For Departure
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">CODE</a>
+                        <a class="dropdown-item" href="#">CODE</a>
+                        <a class="dropdown-item" href="#">CODE</a>
+                        <a class="dropdown-item" href="#">CODE</a>
+                        <a class="dropdown-item" href="#">CODE</a>
+                    </div>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Click For Arrival
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">CODE</a>
+                        <a class="dropdown-item" href="#">CODE</a>
+                        <a class="dropdown-item" href="#">CODE</a>
+                        <a class="dropdown-item" href="#">CODE</a>
+                        <a class="dropdown-item" href="#">CODE</a>
+                    </div>
+                    <button type="button" class="btn btn-dark">Submit</button>
+                </div>
+
+
             </div>
         </div>
 
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Click For Departure
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">CODE</a>
-                <a class="dropdown-item" href="#">CODE</a>
-                <a class="dropdown-item" href="#">CODE</a>
-                <a class="dropdown-item" href="#">CODE</a>
-                <a class="dropdown-item" href="#">CODE</a>
-            </div>
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Click For Arrival
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">CODE</a>
-                <a class="dropdown-item" href="#">CODE</a>
-                <a class="dropdown-item" href="#">CODE</a>
-                <a class="dropdown-item" href="#">CODE</a>
-                <a class="dropdown-item" href="#">CODE</a>
-            </div>
-            <button type="button" class="btn btn-dark">Submit</button>
-        </div>
+
 
         <div class="row">
             <div class="col-md-12" id="tips">

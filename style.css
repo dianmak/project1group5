@@ -2,6 +2,9 @@
     margin:0;
 }
 
+body{
+    letter-spacing: .05em;
+}
 .icon{
     width:25%;
 }
@@ -16,6 +19,11 @@
 #menu{
     height: 600px;
     padding-top: 275px;
+    background: url("./images/hero-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+    background-position: center;
 }
 
 #aag{
@@ -23,9 +31,19 @@
 }
 
 #photo{
-    width: 100%;
+    display: block;
+    max-width: 80%;
 }
 
 #flightInfo, #safetyInfo, #tips{
     height: 300px;
 }
+
+.card-deck{
+padding: 50px;
+margin: 10px;
+}
+
+footer {
+
+  }

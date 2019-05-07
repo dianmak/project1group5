@@ -12,8 +12,11 @@
 
     <!-- JQUERY -->
 
+    <!-- STYLES -->
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+
+    <title>Ready Safe Go</title>
+
 </head>
 
 <body>
@@ -22,13 +25,13 @@
     </div>
 
     <div class="jumbotron text-center" id="menu">
-        <h1>TAGLINE</h1>
+        <h1>SAFE SOLO TRAVEL</h1>
         <p>Discover your next adventure. Where do you want to go?</p>
 
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown button
+                Click To Explore
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="#">MA</a>
@@ -44,7 +47,7 @@
     <div class="container-fluid text-center">
         <div class="row" id="aag">
             <div class="col-md-12">
-                <h1>EXPLORE LOCATION</h1>
+                <h1>EXPLORE A LOCATION</h1>
                 <p>Check out your destination at a glance!</p>
             </div>
         </div>
@@ -57,12 +60,7 @@
                 <img src="./images/safetyicon.png" class="icon">
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-md-12" id="photo">
-                <img src="images/skyline.jpg">
-            </div>
-        </div>
+        <img src="images/skyline-bw.jpg" class="img-fluid" alt="Responsive image" max-width="100%" height="auto">
 
         <div class="row">
             <div class="col-md-12" id="flightInfo">
@@ -96,30 +94,43 @@
             </div>
         </div>
 
-
         <div class="row">
             <div class="col-md-12" id="tips">
                 <h1>TIPS AND RESOURCES</h1>
                 <p>Enjoy our tips and tricks for safer solo travel!</p>
 
-                <h2>Stay connected</h2>
-                <p>Make sure you share your itinerary with someone you trust</p>
-                <br>
-
-                <h2>Study your destination</h2>
-                <p>Be aware of safety concerns and dangerous neighborhoods</p>
-                <br>
-
-                <h2>Trust your instincts!</h2>
-
-                <a
-                    href="https://www.amazon.com/Tree-Bud-Survival-Aluminum-Emergency/dp/B07H4JNVKH/ref=sr_1_5?keywords=emergency+whistle&qid=1556987403&s=sporting-goods&sr=1-5">Buy
-                    an emergency whistle</a>
+                <div class="card-deck">
+                    <div class="card">
+                        <img class="card-img-top" src="./images/p1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Stay Connected</h5>
+                            <p class="card-text">Make sure you share your itinerary with someone you trust</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="./images/p2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Study Your Destination</h5>
+                            <p class="card-text">Be aware of safety concerns and dangerous neighborhoods</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="./images/p3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Trust your instincts!</h5>
+                            <p class="card-text">Insert link to buy a whistle</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
-
     </div>
+
+
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"

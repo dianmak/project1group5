@@ -35,7 +35,7 @@
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item state" href="#">MA</a>
-                <a class="dropdown-item state" href="#">CT</a>
+                <a class="dropdown-item state" href="#">MD</a>
                 <a class="dropdown-item state" href="#">RI</a>
                 <a class="dropdown-item state" href="#">IL</a>
                 <a class="dropdown-item state" href="#">PA</a>
@@ -82,34 +82,7 @@
         <div class="row">
             <div class="col-md-12" id="flightInfo">
                 <h1>JET SET</h1>
-<<<<<<< HEAD
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Click For Departure
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">CODE</a>
-                        <a class="dropdown-item" href="#">CODE</a>
-                        <a class="dropdown-item" href="#">CODE</a>
-                        <a class="dropdown-item" href="#">CODE</a>
-                        <a class="dropdown-item" href="#">CODE</a>
-                    </div>
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Click For Arrival
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">CODE</a>
-                        <a class="dropdown-item" href="#">CODE</a>
-                        <a class="dropdown-item" href="#">CODE</a>
-                        <a class="dropdown-item" href="#">CODE</a>
-                        <a class="dropdown-item" href="#">CODE</a>
-                    </div>
-                    <button type="button" class="btn btn-dark">Submit</button>
-                </div>
 
-=======
                 <form id="flight-form">
                     <label for="location">What's your home airport?</label><br>
                     <input type="text" id="location-input"><br>
@@ -120,8 +93,31 @@
                 <div class="col-md-12" id="flightData"></div>
             </div>
         </div>
->>>>>>> 4a55f36346ec1b81c1139c7e9ee027f60bd4fff5
 
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Click For Departure
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="departureDrop">
+                <option class="dropdown-item departureAirport" href="#">BOS</option>
+                <option class="dropdown-item departureAirport" href="#">BWI</option>
+                <option class="dropdown-item departureAirport" href="#">PVD</option>
+                <option class="dropdown-item departureAirport" href="#">ORD</option>
+                <option class="dropdown-item departureAirport" href="#">PHL</option>
+            </div>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Click For Arrival
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="arrivalDrop">
+                <a class="dropdown-item arrivalAirport" href="#">BOS</a>
+                <a class="dropdown-item arrivalAirport" href="#">BWI</a>
+                <a class="dropdown-item arrivalAirport" href="#">PVD</a>
+                <a class="dropdown-item arrivalAirport" href="#">ORD</a>
+                <a class="dropdown-item arrivalAirport" href="#">PHL</a>
+            </div>
+            <button type="button" class="btn btn-dark" id="submit">Submit</button>
             </div>
         </div>
 

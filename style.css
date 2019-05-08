@@ -19,7 +19,7 @@ body{
 #menu{
     height: 600px;
     padding-top: 275px;
-    background: url("./images/Singapore.jpg");
+    background: url("./images/hero-image.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 800px;
@@ -45,7 +45,8 @@ margin:10px;
 }
 
 .card-body {
-    background-color: pink;
+    background: url("./images/hero-image.jpg");
+    background-position-x: 50%;
 }
 
 footer {

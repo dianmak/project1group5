@@ -34,31 +34,49 @@ $(".state").click(function () {
     });
 });
 
-$("#submit").click(function () {
+$("#submit").click(function (event) {
+    event.preventDefault();
+var departure=$(".departure option:selected").val()
+var arrival=$(".arrival option:selected").val()
+var date=$("input[type='date']").val()
+var queryURL="https://csa-proxy.herokuapp.com/flights/" + departure + "/" + arrival + "/" + date
+
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": queryURL,
+        "method": "GET",
+        "headers": {
+            "Accept": "application/json",
+            "Authorization": "Bearer ",
+        }
+    }
+    $("#flightData").empty()
+    console.log("fetchingresults")
+    $.ajax(settings)
+        .then(function (test) {
+           
+            var flightArray = test.ScheduleResource.Schedule;
+            console.log(flightArray)
+           
+            for (var i = 0; i < flightArray.length; i++) {
+                var arrivalCode = flightArray[i].Flight.Arrival.AirportCode
+                var departureCode = flightArray[i].Flight.Departure.AirportCode
+                var arrivalTime = flightArray[i].Arrival.ScheduledTimeLocal.DateTime
+                var departureTime = flightArray[i].Flight.Departure.ScheduledTimeLocal.DateTime
+                if (arrivalCode && departureCode && arrivalTime && departureTime){
+                    $("#flightData").append(`
+                    <div class="col-md-5">
+                    <h3> Arrival Airport: ${arrivalCode} </h3>
+                    <h3> Arrival Time: ${arrivalTime} </h3>
+                    <h3> Departure Airport: ${departureCode} </h3>
+                    <h3> Departure Time: ${departureTime} </h3>
+                    </div>
+                    `)
+                }
+                
+            }
+
+        })
 
 });
-
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://csa-proxy.herokuapp.com/flights/BOS/SDQ/2019-06-01",
-    "method": "GET",
-    "headers": {
-        "Accept": "application/json",
-        "Authorization": "Bearer ",
-    }
-}
-$.ajax(settings).done(function (response) {
-    console.log(response);
-}).then(function (test) {
-    console.log(test.ScheduleResource.Schedule[0]);
-
-    $("#flightData").html(`
-    <h3> Arrival Airport: ${test.ScheduleResource.Schedule[0].Flight.Arrival.AirportCode} </h3>
-    <h3> Arrival Time: ${test.ScheduleResource.Schedule[0].Flight.Arrival.ScheduledTimeLocal.DateTime} </h3>
-    <h3> Departure Airport: ${test.ScheduleResource.Schedule[0].Flight.Departure.AirportCode} </h3>
-    <h3> Departure Time: ${test.ScheduleResource.Schedule[0].Flight.Departure.ScheduledTimeLocal.DateTime} </h3>
-    `)
-})
-
-

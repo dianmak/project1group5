@@ -40,6 +40,14 @@ $(".dropdown-item").click(function (e) {
 
 
 $("#submit").click(function () {
+
+    var text1 = $('#departureDrop').find('option:selected').text();
+
+    var text2 = $('#arrivalDrop').find('option:selected').text();
+
+    console.log(text1 + text2);
+
+
     var departure = $("#departureDrop option:selected").text();
     console.log(departure);
     // var text = $('.departureAirport').find('option:selected').text();
@@ -47,6 +55,7 @@ $("#submit").click(function () {
 
     // var query = "https://csa-proxy.herokuapp.com/flights/" + departureAirport + "/" + arrivalAirport + "/2019-06-01";
     // console.log(query);
+
 
     var settings = {
         "async": true,

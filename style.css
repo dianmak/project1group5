@@ -1,22 +1,31 @@
-.jumbotron{
-    margin:0;
-}
 
 body{
     letter-spacing: .05em;
 }
-.icon{
-    width:25%;
-}
-
 #header{
     background: white;
     height: 75px;
     padding: 0;
     padding-top: 15px;
 }
+.parallax {
+    /* The image used */
+    background-image: url("images/hero-image2.jpg");
 
-#menu{
+    /* Set a specific height */
+    height: 700px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-top: 20%;
+}
+
+
+/*#menu{
     height: 600px;
     padding-top: 275px;
     background: url("./images/hero-image.jpg");
@@ -24,9 +33,9 @@ body{
     background-repeat: no-repeat;
     height: 800px;
     background-position: center;
-}
+}*/
 
-#aag{
+#crime{
     padding-top: 50px;
 }
 
@@ -48,7 +57,3 @@ margin:10px;
     background: url("./images/hero-image.jpg");
     background-position-x: 50%;
 }
-
-footer {
-
-  }

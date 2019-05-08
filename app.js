@@ -40,16 +40,14 @@ $(".dropdown-item").click(function (e) {
 
 
 $("#submit").click(function () {
+    console.log("test");
 
-    var text1 = $('#departureDrop').find('option:selected').text();
+    var text1 = $('.departure').find('option:selected').text();
 
-    var text2 = $('#arrivalDrop').find('option:selected').text();
+    var text2 = $('.arrival').find('option:selected').text();
 
-    console.log(text1 + text2);
+    console.log(text1);
 
-
-    var departure = $("#departureDrop option:selected").text();
-    console.log(departure);
     // var text = $('.departureAirport').find('option:selected').text();
     // console.log(text);
 

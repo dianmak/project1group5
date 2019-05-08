@@ -50,5 +50,10 @@ body{
 
 .card-deck{
 padding: 50px;
-margin: 10px;
+margin:10px;
+}
+
+.card-body {
+    background: url("./images/hero-image.jpg");
+    background-position-x: 50%;
 }

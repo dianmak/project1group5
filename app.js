@@ -34,31 +34,48 @@ $(".state").click(function () {
     });
 });
 
-$("#submit").click(function () {
+$(".dropdown-item").click(function (e) {
+    e.preventDefault();
+})
 
+
+$("#submit").click(function () {
+    var departure = $("#departureDrop option:selected").text();
+    console.log(departure);
+    // var text = $('.departureAirport').find('option:selected').text();
+    // console.log(text);
+
+    // var query = "https://csa-proxy.herokuapp.com/flights/" + departureAirport + "/" + arrivalAirport + "/2019-06-01";
+    // console.log(query);
+
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://csa-proxy.herokuapp.com/flights/BOS/SDQ/2019-06-01",
+        "method": "GET",
+        "headers": {
+            "Accept": "application/json",
+            "Authorization": "Bearer ",
+        }
+    }
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+    }).then(function (test) {
+        console.log(test.ScheduleResource.Schedule[0]);
+
+        $("#flightData").html(`
+                <h3> Arrival Airport: ${test.ScheduleResource.Schedule[0].Flight.Arrival.AirportCode} </h3>
+                <h3> Arrival Time: ${test.ScheduleResource.Schedule[0].Flight.Arrival.ScheduledTimeLocal.DateTime} </h3>
+                <h3> Departure Airport: ${test.ScheduleResource.Schedule[0].Flight.Departure.AirportCode} </h3>
+                <h3> Departure Time: ${test.ScheduleResource.Schedule[0].Flight.Departure.ScheduledTimeLocal.DateTime} </h3>
+                `)
+    })
 });
 
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://csa-proxy.herokuapp.com/flights/BOS/SDQ/2019-06-01",
-    "method": "GET",
-    "headers": {
-        "Accept": "application/json",
-        "Authorization": "Bearer ",
-    }
-}
-$.ajax(settings).done(function (response) {
-    console.log(response);
-}).then(function (test) {
-    console.log(test.ScheduleResource.Schedule[0]);
 
-    $("#flightData").html(`
-    <h3> Arrival Airport: ${test.ScheduleResource.Schedule[0].Flight.Arrival.AirportCode} </h3>
-    <h3> Arrival Time: ${test.ScheduleResource.Schedule[0].Flight.Arrival.ScheduledTimeLocal.DateTime} </h3>
-    <h3> Departure Airport: ${test.ScheduleResource.Schedule[0].Flight.Departure.AirportCode} </h3>
-    <h3> Departure Time: ${test.ScheduleResource.Schedule[0].Flight.Departure.ScheduledTimeLocal.DateTime} </h3>
-    `)
-})
+
+
+
+
 
 

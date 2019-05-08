@@ -75,38 +75,53 @@
         <div class="row">
             <div class="col-md-12" id="flightInfo">
                 <h1>JET SET</h1>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Click For Departure
-                    </button>
-                    <div class="dropdown-menu departure" aria-labelledby="dropdownMenuButton">
-                        <option class="dropdown-item" href="#">BOS</option>
-                        <option class="dropdown-item" href="#">BWI</option>
-                        <option class="dropdown-item" href="#">PVD</option>
-                        <option class="dropdown-item" href="#">ORD</option>
-                        <option class="dropdown-item" href="#">PHL</option>
-                    </div>
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Click For Arrival
-                    </button>
-                    <div class="dropdown-menu arrival" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">BOS</a>
-                        <a class="dropdown-item" href="#">BWI</a>
-                        <a class="dropdown-item" href="#">PVD</a>
-                        <a class="dropdown-item" href="#">ORD</a>
-                        <a class="dropdown-item" href="#">PHL</a>
-                    </div>
-                    <button type="button" class="btn btn-dark" id="submit">Submit</button>
-                </div>
-
-
             </div>
         </div>
 
+
+        <div class="dropdown">
+
+            <select class="custom-select departure">
+                <option selected>DEPARTURE Airports</option>
+                <option value="BOS">BOSTON</option>
+                <option value="BDL">HARTFORD</option>
+                <option value="PVD">WARWICK</option>
+                <option value="RID">CHICAGO</option>
+                <option value="PHL">PHILADELPHIA</option>
+            </select>
+
+            <select class="custom-select arrival">
+                <option selected>ARRIVAL Airports</option>
+                <option value="BOS">BOSTON</option>
+                <option value="BDL">HARTFORD</option>
+                <option value="PVD">WARWICK</option>
+                <option value="RID">CHICAGO</option>
+                <option value="PHL">PHILADELPHIA</option>
+            </select>
+            <br> </br>
+            <label for="start">Date of Departure</label>
+
+            <input type="date" id="start" name="trip-start" min="2019-05-11" max="2020-05-11">
+
+            <button type="button" id="submit" class="btn btn-dark">Submit</button>
+        </div>
+
         <div class="row">
-            <div class="col-md-12" id="flightData"></div>
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Departure</th>
+                            <th scope="col">Departure Time</th>
+                            <th scope="col">Arrival</th>
+                            <th scope="col">Arrival Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="flightData">
+
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <div class="row">

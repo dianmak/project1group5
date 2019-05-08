@@ -59,10 +59,10 @@ var queryURL="https://csa-proxy.herokuapp.com/flights/" + departure + "/" + arri
             var flightArray = test.ScheduleResource.Schedule;
             console.log(flightArray)
            
-            for (var i = 0; i < flightArray.length; i++) {
+            for (var i = 0; i < 5; i++) {
                 var arrivalCode = flightArray[i].Flight.Arrival.AirportCode
                 var departureCode = flightArray[i].Flight.Departure.AirportCode
-                var arrivalTime = flightArray[i].Arrival.ScheduledTimeLocal.DateTime
+                var arrivalTime = flightArray[i].Flight.Arrival.ScheduledTimeLocal.DateTime
                 var departureTime = flightArray[i].Flight.Departure.ScheduledTimeLocal.DateTime
                 if (arrivalCode && departureCode && arrivalTime && departureTime){
                     $("#flightData").append(`

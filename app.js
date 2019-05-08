@@ -64,25 +64,26 @@ $("#submit").click(function (event) {
             console.log(flightArray)
 
             for (var i = 0; i < 5; i++) {
-                var arrivalCode = flightArray[i].Flight[0].Arrival.AirportCode
-                var departureCode = flightArray[i].Flight[0].Departure.AirportCode
-                var arrivalTime = flightArray[i].Flight[0].Arrival.ScheduledTimeLocal.DateTime
-                var departureTime = flightArray[i].Flight[0].Departure.ScheduledTimeLocal.DateTime
+                var arrivalCode = flightArray[i].Flight.Arrival.AirportCode
+                var departureCode = flightArray[i].Flight.Departure.AirportCode
+                var arrivalTime = flightArray[i].Flight.Arrival.ScheduledTimeLocal.DateTime
+                var departureTime = flightArray[i].Flight.Departure.ScheduledTimeLocal.DateTime
                 if (arrivalCode && departureCode && arrivalTime && departureTime) {
                     $("#flightData").append(`
-                    < tr >
-                    <td>${departureCode}</td>
-                    <td>${departureTime}</td>
-                    <td>${arrivalTime}</td>
-                    <td>${arrivalCode}</td>
-                    </tr >
+                    <tr>
+                    <td> ${arrivalCode} </td>
+                    <td> ${arrivalTime} </td>
+                    <td> ${departureCode} </td>
+                    <td> ${departureTime} </td>
+                    </tr>
                     `)
                 }
+
             }
+
         })
 
 });
-
 
 
 

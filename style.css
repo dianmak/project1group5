@@ -50,10 +50,17 @@ body{
         display: block;
         max-width: 80%;
     }
-    #flightInfo, #safetyInfo, #tips{
+ #safetyInfo, #tips{
         height: 300px;
     }
     .card-deck{
     padding: 50px;
     margin: 10px;
+    }
+
+    #drop{
+        width: 50%;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 25px;
     }

@@ -14,17 +14,21 @@
 
     <!-- STYLES -->
     <link rel="stylesheet" href="./style.css">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png" />
 
     <title>Ready Safe Go</title>
 
 </head>
 
 <body>
-    <div class="jumbotron text-center" id="header">
-        <h1>READY-SAFE-GO</h1>
-    </div>
+    <nav class="navbar fixed-top navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="./images/safetyicon.png" width="30" height="30" class="d-inline-block align-top"
+                alt="">READYSAFEGO</a>
+    </nav>
 
-    <div class="jumbotron text-center" id="menu">
+    <div class="parallax">
         <h1>SAFE SOLO TRAVEL</h1>
         <p>Discover your next adventure. Where do you want to go?</p>
 
@@ -44,45 +48,30 @@
 
     </div>
 
-    <div class="container-fluid text-center">
-        <div class="row" id="aag">
+    <div class="container-fluid text-center" id="crime">
+        <div class="row">
             <div class="col-md-12">
                 <h1>EXPLORE A LOCATION</h1>
-                <p>Check out your destination at a glance!</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <img src="images/planeicon.png" class="icon">
-            </div>
-            <div class="col-md-6">
-                <img src="./images/safetyicon.png" class="icon">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <h1>CRIME STATISTICS</h1>
-                <br>
+                <p>Check out your destination's crime statistics at a glance!</p>
             </div>
         </div>
 
         <div class="row" id="safetyInfo">
             <div class="col-md-6 robbery">
-                <h2>Robbery</h2>
+                <img src="images/safetyicon.png" width="50" height="50">
+                <h3>Robbery</h3>
             </div>
             <div class="col-md-6 rape">
-                <h2>Rape</h2>
+                <img src="images/safetyicon.png" width="50" height="50">
+                <h3>Rape</h3>
             </div>
         </div>
 
-        <img src="images/skyline-bw.jpg" class="img-fluid" alt="Responsive image" max-width="100%" height="auto">
+        <img src="images/skyline-grey.jpg" class="img-fluid" alt="Responsive image" max-width="100%" height="auto">
 
         <div class="row">
             <div class="col-md-12" id="flightInfo">
                 <h1>JET SET</h1>
-<<<<<<< HEAD
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -108,23 +97,8 @@
                     </div>
                     <button type="button" class="btn btn-dark">Submit</button>
                 </div>
-
-=======
-                <form id="flight-form">
-                    <label for="location">What's your home airport?</label><br>
-                    <input type="text" id="location-input"><br>
-                    <label for="date">What date do you want to leave?</label><br>
-                    <input type="text" id="location-input"><br>
-                    <input id="search-flights" type="submit" value="Find a flight">
-                </form>
-                <div class="col-md-12" id="flightData"></div>
             </div>
         </div>
->>>>>>> 4a55f36346ec1b81c1139c7e9ee027f60bd4fff5
-
-            </div>
-        </div>
-
 
 
         <div class="row">
@@ -165,8 +139,6 @@
             </div>
         </div>
     </div>
-
-
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"

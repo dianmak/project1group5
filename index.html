@@ -23,9 +23,6 @@
 </head>
 
 <body>
-    <div class="jumbotron text-center" id="header">
-        <h1>READY-SAFE-GO</h1>
-    </div>
 
     <nav class="navbar fixed-top navbar-light">
         <a class="navbar-brand" href="#">
@@ -38,13 +35,13 @@
         <p>Discover your next adventure. Where do you want to go?</p>
 
         <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 Click To Explore
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item state" href="#">MA</a>
-                <a class="dropdown-item state" href="#">CT</a>
+                <a class="dropdown-item state" href="#">MD</a>
                 <a class="dropdown-item state" href="#">RI</a>
                 <a class="dropdown-item state" href="#">IL</a>
                 <a class="dropdown-item state" href="#">PA</a>
@@ -83,25 +80,25 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Click For Departure
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">CODE</a>
-                        <a class="dropdown-item" href="#">CODE</a>
-                        <a class="dropdown-item" href="#">CODE</a>
-                        <a class="dropdown-item" href="#">CODE</a>
-                        <a class="dropdown-item" href="#">CODE</a>
+                    <div class="dropdown-menu departure" aria-labelledby="dropdownMenuButton">
+                        <option class="dropdown-item" href="#">BOS</option>
+                        <option class="dropdown-item" href="#">BWI</option>
+                        <option class="dropdown-item" href="#">PVD</option>
+                        <option class="dropdown-item" href="#">ORD</option>
+                        <option class="dropdown-item" href="#">PHL</option>
                     </div>
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Click For Arrival
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">CODE</a>
-                        <a class="dropdown-item" href="#">CODE</a>
-                        <a class="dropdown-item" href="#">CODE</a>
-                        <a class="dropdown-item" href="#">CODE</a>
-                        <a class="dropdown-item" href="#">CODE</a>
+                    <div class="dropdown-menu arrival" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">BOS</a>
+                        <a class="dropdown-item" href="#">BWI</a>
+                        <a class="dropdown-item" href="#">PVD</a>
+                        <a class="dropdown-item" href="#">ORD</a>
+                        <a class="dropdown-item" href="#">PHL</a>
                     </div>
-                    <button type="button" class="btn btn-dark">Submit</button>
+                    <button type="button" class="btn btn-dark" id="submit">Submit</button>
                 </div>
 
 
@@ -110,7 +107,6 @@
 
         <div class="row">
             <div class="col-md-12" id="flightData"></div>
-            <h2>Flight Data</h2>
         </div>
 
         <div class="row">
@@ -242,7 +238,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
-        <script src="app.js"></script>
+        <script src="./app.js"></script>
 </body>
 
 </html>

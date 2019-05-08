@@ -1,12 +1,5 @@
-.jumbotron{
-    margin:0;
-}
-
 body{
     letter-spacing: .05em;
-}
-.icon{
-    width:25%;
 }
 
 #header{
@@ -16,34 +9,34 @@ body{
     padding-top: 15px;
 }
 
-#menu{
-    height: 600px;
-    padding-top: 275px;
-    background: url("./images/hero-image.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 800px;
-    background-position: center;
-}
+.parallax {
+    /* The image used */
+    background-image: url("images/hero-image2.jpg");
 
-#aag{
-    padding-top: 50px;
-}
+    /* Set a specific height */
+    height: 700px;
 
-#photo{
-    display: block;
-    max-width: 80%;
-}
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        padding-top: 20%;
+    }
 
-#flightInfo, #safetyInfo, #tips{
-    height: 300px;
-}
-
-.card-deck{
-padding: 50px;
-margin: 10px;
-}
-
-footer {
-
-  }
+    #crime{
+        padding-top: 50px;
+    }
+    
+    #photo{
+        display: block;
+        max-width: 80%;
+    }
+    #flightInfo, #safetyInfo, #tips{
+        height: 300px;
+    }
+    .card-deck{
+    padding: 50px;
+    margin: 10px;
+    }

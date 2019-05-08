@@ -35,7 +35,11 @@ $(".state").click(function () {
 });
 
 $("#submit").click(function () {
+    var text1 = $('#departureDrop').find('option:selected').text();
 
+    var text2 = $('#arrivalDrop').find('option:selected').text();
+
+    console.log(text1 + text2);
 });
 
 var settings = {

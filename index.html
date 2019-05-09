@@ -31,7 +31,7 @@
     </nav>
 
     <div class="parallax">
-        <h1>SAFE SOLO TRAVEL</h1>
+        <h1>SAFE SOLO TRAVEL FOR WOMEN</h1>
         <p>Discover your next adventure. Where do you want to go?</p>
 
         <div class="dropdown">
@@ -71,20 +71,19 @@
         </div>
     </div>
 
-    <img src="images/skyline-grey.jpg" class="img-fluid" alt="Responsive image" max-width="100%" height="auto">
+    <img src="images/skyline.jpg" class="img-fluid" alt="Responsive image" max-width="100%" height="auto">
 
     <div class="row">
         <div class="col-md-12 text-center" id="flightInfo">
             <h1>JET SET</h1>
+            <p>Select desired airport & search flight options!</p>
         </div>
 
         <div class="container-fluid text-center">
-
-
             <div class="dropdown-menu-center" id="drop">
 
-                <select class="custom-select departure">
-                    <option selected>DEPARTURE Airports</option>
+                <select class="custom-select departure" id="depart">
+                    <option selected>DEPARTURE airports</option>
                     <option value="BOS">BOSTON</option>
                     <option value="BDL">HARTFORD</option>
                     <option value="PVD">WARWICK</option>
@@ -92,7 +91,7 @@
                     <option value="PHL">PHILADELPHIA</option>
                 </select>
 
-                <select class="custom-select arrival">
+                <select class="custom-select arrival" id="arrive">
                     <option selected>ARRIVAL Airports</option>
                     <option value="BOS">BOSTON</option>
                     <option value="BDL">HARTFORD</option>
@@ -108,27 +107,36 @@
                 <button type="button" id="submit" class="btn btn-dark">Submit</button>
 
             </div>
+            <img src="images/location.gif" class="img-fluid" alt="Responsive image" max-width="25%" height="auto">
         </div>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <h5>Adventure is Waiting!</h5>
+                        <p>Explore flight options below</p>
+                        <table class="table table-sm table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Departure</th>
+                                    <th scope="col">Departure Time</th>
+                                    <th scope="col">Arrival</th>
+                                    <th scope="col">Arrival Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="flightData">
 
-    <div class="row">
-        <div class="col-md-12">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Departure</th>
-                        <th scope="col">Departure Time</th>
-                        <th scope="col">Arrival</th>
-                        <th scope="col">Arrival Time</th>
-                    </tr>
-                </thead>
-                <tbody id="flightData">
-
-                </tbody>
-            </table>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
 
     <div class="row">
         <div class="col-md-12 text-center" id="tips">

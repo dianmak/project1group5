@@ -25,24 +25,7 @@ body{
     padding-top: 20%;
 }
 
-
-.parallax {
-    /* The image used */
-    background-image: url("images/hero-image2.jpg");
-
-    /* Set a specific height */
-    height: 700px;
-
-        /* Create the parallax scrolling effect */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        text-align: center;
-        padding-top: 20%;
-    }
-
-    #crime{
+    #crime, #flightInfo{
         padding-top: 50px;
     }
     
@@ -63,4 +46,12 @@ body{
         text-align: center;
         margin: auto;
         margin-bottom: 25px;
+    }
+
+    #depart, #arrive{
+    margin: 10px;
+    }
+
+    #tips {
+        padding: 10%;
     }

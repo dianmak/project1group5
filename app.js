@@ -71,10 +71,10 @@ $("#submit").click(function (event) {
                 if (arrivalCode && departureCode && arrivalTime && departureTime) {
                     $("#flightData").append(`
                     <tr>
-                    <td> ${arrivalCode} </td>
-                    <td> ${arrivalTime} </td>
                     <td> ${departureCode} </td>
                     <td> ${departureTime} </td>
+                    <td> ${arrivalCode} </td>
+                    <td> ${arrivalTime} </td>
                     </tr>
                     `)
                 }

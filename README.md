@@ -36,8 +36,9 @@ Our team functioned as a community!
 
 Kelly : created the wireframe & enhanced UI with additional features
 Dian : built the initial HTML structure incorporating Bootstrap & CSS
-Kerianne & Nhi : focused on reasearch & implementation of the crime APIs
-Jamie : conducted reasearch & implementation of the flight API
+Kerianne: focused on research & implementation of the crime and flight APIs.
+Nhi: worked on the research and implementation of the crime and flight APIs, and added features on the UI.
+Jamie : conducted research & implementation of the flight API
 
 * Everyone went above & beyond collaborating and working together on all aspects of our website!
 
